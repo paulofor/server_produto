@@ -1,6 +1,6 @@
 {
   "restApiRoot": "/api",
-  "host": "0.0.0.0",
+  "host": "validacao.kinghost.net",
   "port": 21001,
   "remoting": {
     "context": false,
