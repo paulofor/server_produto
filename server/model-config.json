@@ -1,9 +1,11 @@
+
 {
   "_meta": {
     "sources": [
       "loopback/common/models",
       "loopback/server/models",
       "../common/models",
+      "../common/models/treino_academia",
       "./models"
     ],
     "mixins": [
@@ -39,4 +41,33 @@
     "dataSource": "mysqlDS",
     "public": true
   }
+  ,"GrupoMuscular": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"SerieTreino": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"Exercicio": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"ExecucaoItemSerie": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"CargaPlanejada": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"DiaTreino": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"ItemSerie": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+ 
 }
