@@ -1,8 +1,0 @@
-{
-
-
-    "RegistroPeso": {
-        "dataSource": "mysqlDS",
-        "public": true
-    }
-}

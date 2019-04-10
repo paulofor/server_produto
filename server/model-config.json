@@ -5,7 +5,7 @@
       "loopback/common/models",
       "loopback/server/models",
       "../common/models",
-      "../common/models/treino_academia",
+      "../common/models/treino",
       "./models"
     ],
     "mixins": [
@@ -41,33 +41,36 @@
     "dataSource": "mysqlDS",
     "public": true
   }
-  ,"GrupoMuscular": {
+  ,"TreinoAcademiaGrupoMuscular": {
     "dataSource": "mysqlDS",
     "public": true
   }
-  ,"SerieTreino": {
+  ,"TreinoAcademiaSerieTreino": {
     "dataSource": "mysqlDS",
     "public": true
   }
-  ,"Exercicio": {
+  ,"TreinoAcademiaExercicio": {
     "dataSource": "mysqlDS",
     "public": true
   }
-  ,"ExecucaoItemSerie": {
+  ,"TreinoAcademiaExecucaoItemSerie": {
     "dataSource": "mysqlDS",
     "public": true
   }
-  ,"CargaPlanejada": {
+  ,"TreinoAcademiaCargaPlanejada": {
     "dataSource": "mysqlDS",
     "public": true
   }
-  ,"DiaTreino": {
+  ,"TreinoAcademiaDiaTreino": {
     "dataSource": "mysqlDS",
     "public": true
   }
-  ,"ItemSerie": {
+  ,"TreinoAcademiaItemSerie": {
     "dataSource": "mysqlDS",
     "public": true
   }
- 
+  ,"TreinoAcademiaRegistroPeso": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
 }

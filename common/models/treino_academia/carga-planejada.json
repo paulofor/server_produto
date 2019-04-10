@@ -1,16 +1,34 @@
 
 {
-  "name": "CargaPlanejada",
+  "name": "TreinoAcademiaCargaPlanejada",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "nome": {
+    "id": {
       "type": "string"
-    },
-    "valor": {
+    }
+	,"Id": {
+      "type": "number"
+    }
+	,"ValorCarga": {
+      "type": "number"
+    }
+	,"DataInicio": {
+      "type": "date"
+    }
+	,"DataFinal": {
+      "type": "date"
+    }
+	,"QuantidadeRepeticao": {
+      "type": "number"
+    }
+	,"Ativa": {
+      "type": "number"
+    }
+	,"OrdemRepeticao": {
       "type": "number"
     }
   },

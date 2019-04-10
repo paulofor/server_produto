@@ -1,16 +1,28 @@
 
 {
-  "name": "SerieTreino",
+  "name": "TreinoAcademiaSerieTreino",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "nome": {
+    "id": {
       "type": "string"
-    },
-    "valor": {
+    }
+	,"Id": {
+      "type": "number"
+    }
+	,"DataCriacao": {
+      "type": "date"
+    }
+	,"Ativa": {
+      "type": "number"
+    }
+	,"DataUltimaExecucao": {
+      "type": "date"
+    }
+	,"QtdeExecucao": {
       "type": "number"
     }
   },

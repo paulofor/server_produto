@@ -1,16 +1,22 @@
 
 {
-  "name": "DiaTreino",
+  "name": "TreinoAcademiaDiaTreino",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "nome": {
+    "id": {
       "type": "string"
-    },
-    "valor": {
+    }
+	,"Id": {
+      "type": "number"
+    }
+	,"Data": {
+      "type": "date"
+    }
+	,"Concluido": {
       "type": "number"
     }
   },

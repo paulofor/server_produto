@@ -1,17 +1,29 @@
 
 {
-  "name": "Exercicio",
+  "name": "TreinoAcademiaExercicio",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "nome": {
+    "id": {
       "type": "string"
-    },
-    "valor": {
+    }
+	,"Id": {
       "type": "number"
+    }
+	,"Descricao": {
+      "type": "string"
+    }
+	,"Imagem": {
+      "type": "string"
+    }
+	,"Titulo": {
+      "type": "string"
+    }
+	,"Subtitulo": {
+      "type": "string"
     }
   },
   "validations": [],

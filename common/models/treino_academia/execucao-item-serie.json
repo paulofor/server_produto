@@ -1,16 +1,34 @@
 
 {
-  "name": "ExecucaoItemSerie",
+  "name": "TreinoAcademiaExecucaoItemSerie",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "nome": {
+    "id": {
       "type": "string"
-    },
-    "valor": {
+    }
+	,"Id": {
+      "type": "number"
+    }
+	,"DataHoraInicio": {
+      "type": "date"
+    }
+	,"DataHoraFinalizacao": {
+      "type": "date"
+    }
+	,"CargaUtilizada": {
+      "type": "number"
+    }
+	,"SucessoRepeticoes": {
+      "type": "number"
+    }
+	,"NumeroSerie": {
+      "type": "number"
+    }
+	,"QuantidadeRepeticao": {
       "type": "number"
     }
   },
