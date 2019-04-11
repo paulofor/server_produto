@@ -1,6 +1,6 @@
 
 {
-  "name": "TreinoAcademia_DiaTreino",
+  "name": "TreinoAcademia_Usuario",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -10,11 +10,14 @@
 	"Id": {
       "type": "number"
     }, 
-	"Data": {
-      "type": "date"
+	"Nome": {
+      "type": "string"
     }, 
-	"Concluido": {
-      "type": "number"
+	"Senha": {
+      "type": "string"
+    }, 
+	"Email": {
+      "type": "string"
     }
   },
   "validations": [],

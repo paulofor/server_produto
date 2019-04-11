@@ -1,34 +1,31 @@
 
 {
-  "name": "TreinoAcademiaExecucaoItemSerie",
+  "name": "TreinoAcademia_ExecucaoItemSerie",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "id": {
-      "type": "string"
-    }
-	,"Id": {
+  "properties": { 
+	"Id": {
       "type": "number"
-    }
-	,"DataHoraInicio": {
+    }, 
+	"DataHoraInicio": {
       "type": "date"
-    }
-	,"DataHoraFinalizacao": {
+    }, 
+	"DataHoraFinalizacao": {
       "type": "date"
-    }
-	,"CargaUtilizada": {
+    }, 
+	"CargaUtilizada": {
       "type": "number"
-    }
-	,"SucessoRepeticoes": {
+    }, 
+	"SucessoRepeticoes": {
       "type": "number"
-    }
-	,"NumeroSerie": {
+    }, 
+	"NumeroSerie": {
       "type": "number"
-    }
-	,"QuantidadeRepeticao": {
+    }, 
+	"QuantidadeRepeticao": {
       "type": "number"
     }
   },

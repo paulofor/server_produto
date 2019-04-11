@@ -1,28 +1,25 @@
 
 {
-  "name": "TreinoAcademiaSerieTreino",
+  "name": "TreinoAcademia_SerieTreino",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "id": {
-      "type": "string"
-    }
-	,"Id": {
+  "properties": { 
+	"Id": {
       "type": "number"
-    }
-	,"DataCriacao": {
+    }, 
+	"DataCriacao": {
       "type": "date"
-    }
-	,"Ativa": {
+    }, 
+	"Ativa": {
       "type": "number"
-    }
-	,"DataUltimaExecucao": {
+    }, 
+	"DataUltimaExecucao": {
       "type": "date"
-    }
-	,"QtdeExecucao": {
+    }, 
+	"QtdeExecucao": {
       "type": "number"
     }
   },

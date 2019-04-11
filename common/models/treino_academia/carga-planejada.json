@@ -1,34 +1,31 @@
 
 {
-  "name": "TreinoAcademiaCargaPlanejada",
+  "name": "TreinoAcademia_CargaPlanejada",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "id": {
-      "type": "string"
-    }
-	,"Id": {
+  "properties": { 
+	"Id": {
       "type": "number"
-    }
-	,"ValorCarga": {
+    }, 
+	"ValorCarga": {
       "type": "number"
-    }
-	,"DataInicio": {
+    }, 
+	"DataInicio": {
       "type": "date"
-    }
-	,"DataFinal": {
+    }, 
+	"DataFinal": {
       "type": "date"
-    }
-	,"QuantidadeRepeticao": {
+    }, 
+	"QuantidadeRepeticao": {
       "type": "number"
-    }
-	,"Ativa": {
+    }, 
+	"Ativa": {
       "type": "number"
-    }
-	,"OrdemRepeticao": {
+    }, 
+	"OrdemRepeticao": {
       "type": "number"
     }
   },

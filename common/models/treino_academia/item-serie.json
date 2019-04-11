@@ -1,22 +1,19 @@
 
 {
-  "name": "TreinoAcademiaItemSerie",
+  "name": "TreinoAcademia_ItemSerie",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "id": {
-      "type": "string"
-    }
-	,"Id": {
+  "properties": { 
+	"Id": {
       "type": "number"
-    }
-	,"OrdemExecucao": {
+    }, 
+	"OrdemExecucao": {
       "type": "number"
-    }
-	,"Parametros": {
+    }, 
+	"Parametros": {
       "type": "string"
     }
   },

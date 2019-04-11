@@ -1,25 +1,22 @@
 
 {
-  "name": "TreinoAcademiaRegistroPeso",
+  "name": "TreinoAcademia_RegistroPeso",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "id": {
-      "type": "string"
-    }
-	,"Id": {
+  "properties": { 
+	"Id": {
       "type": "number"
-    }
-	,"Data": {
+    }, 
+	"Data": {
       "type": "date"
-    }
-	,"Valor": {
+    }, 
+	"Valor": {
       "type": "number"
-    }
-	,"Obs": {
+    }, 
+	"Obs": {
       "type": "string"
     }
   },

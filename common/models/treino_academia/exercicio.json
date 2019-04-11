@@ -1,28 +1,25 @@
 
 {
-  "name": "TreinoAcademiaExercicio",
+  "name": "TreinoAcademia_Exercicio",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "id": {
-      "type": "string"
-    }
-	,"Id": {
+  "properties": { 
+	"Id": {
       "type": "number"
-    }
-	,"Descricao": {
+    }, 
+	"Descricao": {
       "type": "string"
-    }
-	,"Imagem": {
+    }, 
+	"Imagem": {
       "type": "string"
-    }
-	,"Titulo": {
+    }, 
+	"Titulo": {
       "type": "string"
-    }
-	,"Subtitulo": {
+    }, 
+	"Subtitulo": {
       "type": "string"
     }
   },

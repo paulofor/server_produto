@@ -5,7 +5,7 @@
       "loopback/common/models",
       "loopback/server/models",
       "../common/models",
-      "../common/models/treino_academia",
+      "../common/models/treino",
       "./models"
     ],
     "mixins": [

@@ -1,22 +1,19 @@
 
 {
-  "name": "TreinoAcademiaGrupoMuscular",
+  "name": "TreinoAcademia_GrupoMuscular",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "id": {
+  "properties": { 
+	"Nome": {
       "type": "string"
-    }
-	,"Nome": {
-      "type": "string"
-    }
-	,"Id": {
+    }, 
+	"Id": {
       "type": "number"
-    }
-	,"Imagem": {
+    }, 
+	"Imagem": {
       "type": "string"
     }
   },
