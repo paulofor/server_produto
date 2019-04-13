@@ -7,18 +7,29 @@
     "validateUpsert": true
   },
   "properties": { 
-	"Id": {
+	"id": {
       "type": "number"
     }, 
-	"OrdemExecucao": {
+	"ordemExecucao": {
       "type": "number"
     }, 
-	"Parametros": {
+	"parametros": {
       "type": "string"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": { 
+	"SerieTreino": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_SerieTreino",
+      "foreignKey": ""
+    }, 
+	"Exercicio": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_Exercicio",
+      "foreignKey": ""
+    }  
+  },
   "acls": [],
   "methods": {}
 }

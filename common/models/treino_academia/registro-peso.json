@@ -7,21 +7,27 @@
     "validateUpsert": true
   },
   "properties": { 
-	"Id": {
+	"id": {
       "type": "number"
     }, 
-	"Data": {
+	"data": {
       "type": "date"
     }, 
-	"Valor": {
+	"valor": {
       "type": "number"
     }, 
-	"Obs": {
+	"obs": {
       "type": "string"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": { 
+	"Usuario": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_Usuario",
+      "foreignKey": ""
+    }  
+  },
   "acls": [],
   "methods": {}
 }

@@ -7,21 +7,22 @@
     "validateUpsert": true
   },
   "properties": { 
-	"Id": {
+	"id": {
       "type": "number"
     }, 
-	"Nome": {
+	"nome": {
       "type": "string"
     }, 
-	"Senha": {
+	"senha": {
       "type": "string"
     }, 
-	"Email": {
+	"email": {
       "type": "string"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {  
+  },
   "acls": [],
   "methods": {}
 }

@@ -7,18 +7,34 @@
     "validateUpsert": true
   },
   "properties": { 
-	"Id": {
+	"id": {
       "type": "number"
     }, 
-	"Data": {
+	"data": {
       "type": "date"
     }, 
-	"Concluido": {
+	"concluido": {
       "type": "number"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": { 
+	"SerieTreino": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_SerieTreino",
+      "foreignKey": ""
+    }, 
+	"Exercicio": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_Exercicio",
+      "foreignKey": ""
+    }, 
+	"Usuario": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_Usuario",
+      "foreignKey": ""
+    }  
+  },
   "acls": [],
   "methods": {}
 }

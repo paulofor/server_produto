@@ -1,79 +1,113 @@
 
 drop table if exists TreinoAcademia_GrupoMuscular;
 create table TreinoAcademia_GrupoMuscular ( 
-	Nome  VARCHAR(50) , 
-	Id  INTEGER AUTO_INCREMENT, 
-	Imagem  VARCHAR(255) ,
+	nome  VARCHAR(50) , 
+	id  BIGINT AUTO_INCREMENT, 
+	imagem  VARCHAR(255) ,
+  
+
 	PRIMARY KEY (Id)
 ); 
 drop table if exists TreinoAcademia_SerieTreino;
 create table TreinoAcademia_SerieTreino ( 
-	Id  INTEGER AUTO_INCREMENT, 
-	DataCriacao  DATETIME , 
-	Ativa  TINYINT , 
-	DataUltimaExecucao  DATETIME , 
-	QtdeExecucao  INTEGER ,
+	id  BIGINT AUTO_INCREMENT, 
+	dataCriacao  DATETIME , 
+	ativa  TINYINT , 
+	dataUltimaExecucao  DATETIME , 
+	qtdeExecucao  INTEGER ,
+ 
+	usuarioId BIGINT,  
+
 	PRIMARY KEY (Id)
 ); 
 drop table if exists TreinoAcademia_Exercicio;
 create table TreinoAcademia_Exercicio ( 
-	Id  INTEGER AUTO_INCREMENT, 
-	Descricao  VARCHAR(50) , 
-	Imagem  VARCHAR(255) , 
-	Titulo  VARCHAR(50) , 
-	Subtitulo  VARCHAR(50) ,
+	id  BIGINT AUTO_INCREMENT, 
+	descricao  VARCHAR(50) , 
+	imagem  VARCHAR(255) , 
+	titulo  VARCHAR(50) , 
+	subtitulo  VARCHAR(50) ,
+ 
+	grupoMuscularId BIGINT, 
+	diaTreinoId BIGINT, 
+	usuarioId BIGINT,  
+
 	PRIMARY KEY (Id)
 ); 
 drop table if exists TreinoAcademia_ExecucaoItemSerie;
 create table TreinoAcademia_ExecucaoItemSerie ( 
-	Id  INTEGER AUTO_INCREMENT, 
-	DataHoraInicio  DATETIME , 
-	DataHoraFinalizacao  DATETIME , 
-	CargaUtilizada  DECIMAL , 
-	SucessoRepeticoes  TINYINT , 
-	NumeroSerie  INTEGER , 
-	QuantidadeRepeticao  INTEGER ,
+	id  BIGINT AUTO_INCREMENT, 
+	dataHoraInicio  DATETIME , 
+	dataHoraFinalizacao  DATETIME , 
+	cargaUtilizada  DECIMAL , 
+	sucessoRepeticoes  TINYINT , 
+	numeroSerie  INTEGER , 
+	quantidadeRepeticao  INTEGER ,
+ 
+	diaTreinoId BIGINT, 
+	itemSerieId BIGINT, 
+	exercicioId BIGINT, 
+	usuarioId BIGINT,  
+
 	PRIMARY KEY (Id)
 ); 
 drop table if exists TreinoAcademia_CargaPlanejada;
 create table TreinoAcademia_CargaPlanejada ( 
-	Id  INTEGER AUTO_INCREMENT, 
-	ValorCarga  DECIMAL , 
-	DataInicio  DATETIME , 
-	DataFinal  DATETIME , 
-	QuantidadeRepeticao  INTEGER , 
-	Ativa  TINYINT , 
-	OrdemRepeticao  INTEGER ,
+	id  BIGINT AUTO_INCREMENT, 
+	valorCarga  DECIMAL , 
+	dataInicio  DATETIME , 
+	dataFinal  DATETIME , 
+	quantidadeRepeticao  INTEGER , 
+	ativa  TINYINT , 
+	ordemRepeticao  INTEGER ,
+ 
+	itemSerieId BIGINT, 
+	usuarioId BIGINT,  
+
 	PRIMARY KEY (Id)
 ); 
 drop table if exists TreinoAcademia_DiaTreino;
 create table TreinoAcademia_DiaTreino ( 
-	Id  INTEGER AUTO_INCREMENT, 
-	Data  DATETIME , 
-	Concluido  TINYINT ,
+	id  BIGINT AUTO_INCREMENT, 
+	data  DATETIME , 
+	concluido  TINYINT ,
+ 
+	serieTreinoId BIGINT, 
+	exercicioId BIGINT, 
+	usuarioId BIGINT,  
+
 	PRIMARY KEY (Id)
 ); 
 drop table if exists TreinoAcademia_ItemSerie;
 create table TreinoAcademia_ItemSerie ( 
-	Id  INTEGER AUTO_INCREMENT, 
-	OrdemExecucao  INTEGER , 
-	Parametros  VARCHAR(255) ,
+	id  BIGINT AUTO_INCREMENT, 
+	ordemExecucao  INTEGER , 
+	parametros  VARCHAR(255) ,
+ 
+	serieTreinoId BIGINT, 
+	exercicioId BIGINT,  
+
 	PRIMARY KEY (Id)
 ); 
 drop table if exists TreinoAcademia_RegistroPeso;
 create table TreinoAcademia_RegistroPeso ( 
-	Id  INTEGER AUTO_INCREMENT, 
-	Data  DATETIME , 
-	Valor  DECIMAL , 
-	Obs  VARCHAR(255) ,
+	id  BIGINT AUTO_INCREMENT, 
+	data  DATETIME , 
+	valor  DECIMAL , 
+	obs  VARCHAR(255) ,
+ 
+	usuarioId BIGINT,  
+
 	PRIMARY KEY (Id)
 ); 
 drop table if exists TreinoAcademia_Usuario;
 create table TreinoAcademia_Usuario ( 
-	Id  INTEGER AUTO_INCREMENT, 
-	Nome  VARCHAR(255) , 
-	Senha  VARCHAR(255) , 
-	Email  VARCHAR(50) ,
+	id  BIGINT AUTO_INCREMENT, 
+	nome  VARCHAR(255) , 
+	senha  VARCHAR(255) , 
+	email  VARCHAR(50) ,
+  
+
 	PRIMARY KEY (Id)
 ); 
 

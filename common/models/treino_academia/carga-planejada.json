@@ -7,30 +7,41 @@
     "validateUpsert": true
   },
   "properties": { 
-	"Id": {
+	"id": {
       "type": "number"
     }, 
-	"ValorCarga": {
+	"valorCarga": {
       "type": "number"
     }, 
-	"DataInicio": {
+	"dataInicio": {
       "type": "date"
     }, 
-	"DataFinal": {
+	"dataFinal": {
       "type": "date"
     }, 
-	"QuantidadeRepeticao": {
+	"quantidadeRepeticao": {
       "type": "number"
     }, 
-	"Ativa": {
+	"ativa": {
       "type": "number"
     }, 
-	"OrdemRepeticao": {
+	"ordemRepeticao": {
       "type": "number"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": { 
+	"ItemSerie": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_ItemSerie",
+      "foreignKey": ""
+    }, 
+	"Usuario": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_Usuario",
+      "foreignKey": ""
+    }  
+  },
   "acls": [],
   "methods": {}
 }

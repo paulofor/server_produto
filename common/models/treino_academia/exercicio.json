@@ -7,29 +7,39 @@
     "validateUpsert": true
   },
   "properties": { 
-	"Id": {
+	"id": {
       "type": "number"
     }, 
-	"Descricao": {
+	"descricao": {
       "type": "string"
     }, 
-	"Imagem": {
+	"imagem": {
       "type": "string"
     }, 
-	"Titulo": {
+	"titulo": {
       "type": "string"
     }, 
-	"Subtitulo": {
+	"subtitulo": {
       "type": "string"
     }
   },
   "validations": [],
-  "relations": {
-    "GrupoMuscular": {
+  "relations": { 
+	"grupoMuscular": {
       "type": "belongsTo",
       "model": "TreinoAcademia_GrupoMuscular",
       "foreignKey": ""
-    }
+    }, 
+	"diaTreino": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_DiaTreino",
+      "foreignKey": ""
+    }, 
+	"usuario": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_Usuario",
+      "foreignKey": ""
+    }  
   },
   "acls": [],
   "methods": {}

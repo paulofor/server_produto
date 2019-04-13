@@ -7,18 +7,19 @@
     "validateUpsert": true
   },
   "properties": { 
-	"Nome": {
+	"nome": {
       "type": "string"
     }, 
-	"Id": {
+	"id": {
       "type": "number"
     }, 
-	"Imagem": {
+	"imagem": {
       "type": "string"
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {  
+  },
   "acls": [],
   "methods": {}
 }

@@ -7,31 +7,50 @@
     "validateUpsert": true
   },
   "properties": { 
-	"Id": {
+	"id": {
       "type": "number"
     }, 
-	"DataHoraInicio": {
+	"dataHoraInicio": {
       "type": "date"
     }, 
-	"DataHoraFinalizacao": {
+	"dataHoraFinalizacao": {
       "type": "date"
     }, 
-	"CargaUtilizada": {
+	"cargaUtilizada": {
       "type": "number"
     }, 
-	"SucessoRepeticoes": {
+	"sucessoRepeticoes": {
       "type": "number"
     }, 
-	"NumeroSerie": {
+	"numeroSerie": {
       "type": "number"
     }, 
-	"QuantidadeRepeticao": {
+	"quantidadeRepeticao": {
       "type": "number"
     }
   },
   "validations": [],
-  "relations": {
-    
+  "relations": { 
+	"DiaTreino": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_DiaTreino",
+      "foreignKey": ""
+    }, 
+	"ItemSerie": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_ItemSerie",
+      "foreignKey": ""
+    }, 
+	"Exercicio": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_Exercicio",
+      "foreignKey": ""
+    }, 
+	"Usuario": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_Usuario",
+      "foreignKey": ""
+    }  
   },
   "acls": [],
   "methods": {}
