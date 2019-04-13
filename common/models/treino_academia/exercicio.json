@@ -24,7 +24,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "GrupoMuscular": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_GrupoMuscular",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {}
 }
