@@ -16,5 +16,31 @@
   "validations": [],
   "relations": {},
   "acls": [],
-  "methods": {}
+  "methods": {
+    "SubmitExemplo": {
+      "accepts": [
+        {
+          "arg": "item",
+          "type": "object",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "returns": [
+        {
+          "arg": "resultado",
+          "type": "object",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "submit da tela exemplo",
+      "http": [
+        {
+          "path": "/submitExemplo",
+          "verb": "post"
+        }
+      ]
+    }
+  }
 }

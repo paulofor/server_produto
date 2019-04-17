@@ -1,4 +1,3 @@
-
 {
   "_meta": {
     "sources": [
@@ -40,40 +39,40 @@
   "ExemploModelo": {
     "dataSource": "mysqlDS",
     "public": true
-  }
-  ,"TreinoAcademia_GrupoMuscular": {
+  },
+  "TreinoAcademia_GrupoMuscular": {
     "dataSource": "mysqlDS",
     "public": true
-  }
-  ,"TreinoAcademia_SerieTreino": {
+  },
+  "TreinoAcademia_SerieTreino": {
     "dataSource": "mysqlDS",
     "public": true
-  }
-  ,"TreinoAcademia_Exercicio": {
+  },
+  "TreinoAcademia_Exercicio": {
     "dataSource": "mysqlDS",
     "public": true
-  }
-  ,"TreinoAcademia_ExecucaoItemSerie": {
+  },
+  "TreinoAcademia_ExecucaoItemSerie": {
     "dataSource": "mysqlDS",
     "public": true
-  }
-  ,"TreinoAcademia_CargaPlanejada": {
+  },
+  "TreinoAcademia_CargaPlanejada": {
     "dataSource": "mysqlDS",
     "public": true
-  }
-  ,"TreinoAcademia_DiaTreino": {
+  },
+  "TreinoAcademia_DiaTreino": {
     "dataSource": "mysqlDS",
     "public": true
-  }
-  ,"TreinoAcademia_ItemSerie": {
+  },
+  "TreinoAcademia_ItemSerie": {
     "dataSource": "mysqlDS",
     "public": true
-  }
-  ,"TreinoAcademia_RegistroPeso": {
+  },
+  "TreinoAcademia_RegistroPeso": {
     "dataSource": "mysqlDS",
     "public": true
-  }
-  ,"TreinoAcademia_Usuario": {
+  },
+  "TreinoAcademia_Usuario": {
     "dataSource": "mysqlDS",
     "public": true
   }
