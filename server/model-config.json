@@ -75,5 +75,9 @@
   "TreinoAcademia_Usuario": {
     "dataSource": "mysqlDS",
     "public": true
+  },
+  "testeBase": {
+    "dataSource": "mysqlDS",
+    "public": true
   }
 }
