@@ -31,17 +31,18 @@
   },
   "validations": [],
   "relations": { 
-	"ItemSerie": {
+	"itemSerie": {
       "type": "belongsTo",
       "model": "TreinoAcademia_ItemSerie",
       "foreignKey": ""
     }, 
-	"Usuario": {
+	"usuario": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Usuario",
       "foreignKey": ""
     }  
   },
   "acls": [],
-  "methods": {}
+  "methods": {
+  }
 }

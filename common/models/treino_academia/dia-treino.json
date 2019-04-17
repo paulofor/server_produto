@@ -19,22 +19,23 @@
   },
   "validations": [],
   "relations": { 
-	"SerieTreino": {
+	"serieTreino": {
       "type": "belongsTo",
       "model": "TreinoAcademia_SerieTreino",
       "foreignKey": ""
     }, 
-	"Exercicio": {
+	"exercicio": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Exercicio",
       "foreignKey": ""
     }, 
-	"Usuario": {
+	"usuario": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Usuario",
       "foreignKey": ""
     }  
   },
   "acls": [],
-  "methods": {}
+  "methods": {
+  }
 }

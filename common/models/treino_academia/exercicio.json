@@ -42,5 +42,31 @@
     }  
   },
   "acls": [],
-  "methods": {}
+  "methods": { 
+      "SubmitExercicioCadastroPage": {
+      "accepts": [
+        {
+          "arg": "item",
+          "type": "object",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "returns": [
+        {
+          "arg": "resultado",
+          "type": "object",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "submit da tela ExercicioCadastroPage",
+      "http": [
+        {
+          "path": "/submitExercicioCadastroPage",
+          "verb": "post"
+        }
+      ]
+    }
+  }
 }

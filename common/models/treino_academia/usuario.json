@@ -24,5 +24,6 @@
   "relations": {  
   },
   "acls": [],
-  "methods": {}
+  "methods": {
+  }
 }

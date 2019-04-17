@@ -31,27 +31,28 @@
   },
   "validations": [],
   "relations": { 
-	"DiaTreino": {
+	"diaTreino": {
       "type": "belongsTo",
       "model": "TreinoAcademia_DiaTreino",
       "foreignKey": ""
     }, 
-	"ItemSerie": {
+	"itemSerie": {
       "type": "belongsTo",
       "model": "TreinoAcademia_ItemSerie",
       "foreignKey": ""
     }, 
-	"Exercicio": {
+	"exercicio": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Exercicio",
       "foreignKey": ""
     }, 
-	"Usuario": {
+	"usuario": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Usuario",
       "foreignKey": ""
     }  
   },
   "acls": [],
-  "methods": {}
+  "methods": {
+  }
 }

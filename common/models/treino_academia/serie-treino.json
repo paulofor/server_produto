@@ -25,12 +25,13 @@
   },
   "validations": [],
   "relations": { 
-	"Usuario": {
+	"usuario": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Usuario",
       "foreignKey": ""
     }  
   },
   "acls": [],
-  "methods": {}
+  "methods": {
+  }
 }
