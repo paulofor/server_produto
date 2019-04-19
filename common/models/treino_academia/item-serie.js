@@ -5,36 +5,49 @@ var app = require('../../../server/server');
 
 module.exports = function (ItemSerie) {
 
+    // logica de insercao.
 
-    ItemSerie.SubmitCriaSeriePage = function (item, callback) {
-        console.log('ItemSerie.SubmitCriaSeriePage - input: ', JSON.stringify(item));
+    ItemSerie.SubmitCriaSeriePage =  function(item,callback) {
+        if (!item.serieTreinoId || item.serieTreinoId==0) {
+            // criar SerieTreino
+            var serieTreino = {'ativa' : 1, 'qtdeExecucao' : 0 , 'dataCriacao' : new Date()};
+            app.models.TreinoAcademia_SerieTreino.create(serieTreino , (err,result) => {
+                item.serieTreino = result;
+                item.serieTreinoId = result.id;
+                var exercicio = item.exercicio;
+                if (!exercicio.id || exercicio.id==0) {
+                    app.models.TreinoAcademia_Exercicio.create(exercicio, (err,result) => {
+                        item.exercicio = result;
+                        item.exercicioId = result.id;
+                        ItemSerie.create(item, (err,result) => {
+                            item.id = result.id;
+                            callback(err,item);
+                            item.listaCargaPlanejada.forEach(carga => {
+                                carga.itemSerieId = item.id;
+                                app.models.TreinoAcademia_CargaPlanejada.create(carga);
+                            });
+                        })
+                    })
+                }
 
-        var ds = ItemSerie.dataSource;
-        var teste = app.models.ItemSerie;
-
-        Object.getOwnPropertyNames(ds).forEach(function (val, idx, array) {
-            console.log(val + ' -> ' + ds[val]);
-        });
-        for (var item in app.dataSources.db) {
-            console.log('app.dataSources.db.', JSON.stringify(item));
+            })
         }
-        var resultado = item;
-        callback(null, resultado);
-    };
+    }
 
-    ItemSerie.SubmitEditaItemSeriePage = function (item, callback) {
-        const transacao = app.dataSources.db.transaction;
-        await transacao(async models => {
-            const { MyModel } = models;
-            console.log(await MyModel.count()); // 0
-            await MyModel.create({ foo: 'bar' });
-            console.log(await MyModel.count()); // 1
+
+    /*
+    ItemSerie.SubmitCriaSeriePage = async function (item, callback) {
+        ItemSerie.beginTransaction({ isolationLevel: ItemSerie.Transaction.READ_COMMITTED }, function (err, tx) {
+            // Now we have a transaction (tx)
+            if (item.serieTreinoId==0) {
+
+            }
         });
-        console.log(await app.models.MyModel.count()); // 1
+    };
+    */
 
-
-        console.log('ItemSerie.SubmitEditaItemSeriePage - input: ', JSON.stringify(item));
-        var resultado = item;
-        callback(null, resultado);
+    ItemSerie.SubmitEditaItemSeriePage =  function (item, callback) {
+       var result = item;
+       callback(null,result);
     };
 };
