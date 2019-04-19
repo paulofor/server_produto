@@ -28,8 +28,18 @@
 	"usuario": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Usuario",
-      "foreignKey": ""
-    }  
+      "foreignKey": "usuarioId"
+    }  , 
+	"listaItemSerie": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_ItemSerie",
+      "foreignKey": "serieTreinoId"
+    }, 
+	"listaDiaTreino": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_DiaTreino",
+      "foreignKey": "serieTreinoId"
+    }
   },
   "acls": [],
   "methods": {

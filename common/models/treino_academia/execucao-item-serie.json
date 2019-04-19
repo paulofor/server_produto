@@ -34,22 +34,22 @@
 	"diaTreino": {
       "type": "belongsTo",
       "model": "TreinoAcademia_DiaTreino",
-      "foreignKey": ""
+      "foreignKey": "diaTreinoId"
     }, 
 	"itemSerie": {
       "type": "belongsTo",
       "model": "TreinoAcademia_ItemSerie",
-      "foreignKey": ""
+      "foreignKey": "itemSerieId"
     }, 
 	"exercicio": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Exercicio",
-      "foreignKey": ""
+      "foreignKey": "exercicioId"
     }, 
 	"usuario": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Usuario",
-      "foreignKey": ""
+      "foreignKey": "usuarioId"
     }  
   },
   "acls": [],

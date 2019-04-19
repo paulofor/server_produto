@@ -25,7 +25,7 @@
 	"usuario": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Usuario",
-      "foreignKey": ""
+      "foreignKey": "usuarioId"
     }  
   },
   "acls": [],

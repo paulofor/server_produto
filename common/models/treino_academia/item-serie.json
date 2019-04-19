@@ -22,13 +22,23 @@
 	"serieTreino": {
       "type": "belongsTo",
       "model": "TreinoAcademia_SerieTreino",
-      "foreignKey": ""
+      "foreignKey": "serieTreinoId"
     }, 
 	"exercicio": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Exercicio",
-      "foreignKey": ""
-    }  
+      "foreignKey": "exercicioId"
+    }  , 
+	"listaCargaPlanejada": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_CargaPlanejada",
+      "foreignKey": "itemSerieId"
+    }, 
+	"listaExecucaoItemSerie": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_ExecucaoItemSerie",
+      "foreignKey": "itemSerieId"
+    }
   },
   "acls": [],
   "methods": { 

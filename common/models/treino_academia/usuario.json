@@ -21,7 +21,37 @@
     }
   },
   "validations": [],
-  "relations": {  
+  "relations": {   
+	"listaSerieTreino": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_SerieTreino",
+      "foreignKey": "usuarioId"
+    }, 
+	"listaExercicio": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_Exercicio",
+      "foreignKey": "usuarioId"
+    }, 
+	"listaExecucaoItemSerie": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_ExecucaoItemSerie",
+      "foreignKey": "usuarioId"
+    }, 
+	"listaCargaPlanejada": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_CargaPlanejada",
+      "foreignKey": "usuarioId"
+    }, 
+	"listaDiaTreino": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_DiaTreino",
+      "foreignKey": "usuarioId"
+    }, 
+	"listaRegistroPeso": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_RegistroPeso",
+      "foreignKey": "usuarioId"
+    }
   },
   "acls": [],
   "methods": {

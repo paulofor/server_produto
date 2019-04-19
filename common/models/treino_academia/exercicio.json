@@ -28,18 +28,28 @@
 	"grupoMuscular": {
       "type": "belongsTo",
       "model": "TreinoAcademia_GrupoMuscular",
-      "foreignKey": ""
+      "foreignKey": "grupoMuscularId"
     }, 
 	"diaTreino": {
       "type": "belongsTo",
       "model": "TreinoAcademia_DiaTreino",
-      "foreignKey": ""
+      "foreignKey": "diaTreinoId"
     }, 
 	"usuario": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Usuario",
-      "foreignKey": ""
-    }  
+      "foreignKey": "usuarioId"
+    }  , 
+	"listaItemSerie": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_ItemSerie",
+      "foreignKey": "exercicioId"
+    }, 
+	"listaExecucaoItemSerie": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_ExecucaoItemSerie",
+      "foreignKey": "exercicioId"
+    }
   },
   "acls": [],
   "methods": { 
