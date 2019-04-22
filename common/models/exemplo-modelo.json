@@ -14,7 +14,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "listaTeste": {
+      "type": "hasMany",
+      "model": "testeBase",
+      "foreignKey": ""
+    }
+  },
   "acls": [],
   "methods": {
     "SubmitExemplo": {
