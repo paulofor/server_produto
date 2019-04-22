@@ -18,7 +18,12 @@
     }
   },
   "validations": [],
-  "relations": {  
+  "relations": {   
+	"listaExercicio": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_Exercicio",
+      "foreignKey": "grupoMuscularId"
+    }
   },
   "acls": [],
   "methods": {
