@@ -50,7 +50,12 @@
       "type": "belongsTo",
       "model": "TreinoAcademia_Usuario",
       "foreignKey": "usuarioId"
-    }  
+    }  , 
+	"listaExecucaoCarga": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_ExecucaoCarga",
+      "foreignKey": "execucaoItemSerieId"
+    }
   },
   "acls": [],
   "methods": {

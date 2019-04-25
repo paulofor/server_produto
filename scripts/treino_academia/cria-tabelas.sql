@@ -110,4 +110,15 @@ create table TreinoAcademia_Usuario (
 
 	PRIMARY KEY (Id)
 ); 
+drop table if exists TreinoAcademia_ExecucaoCarga;
+create table TreinoAcademia_ExecucaoCarga ( 
+	id  BIGINT AUTO_INCREMENT, 
+	dataHora  DATETIME , 
+	valorCarga  DECIMAL , 
+	repeticao  INTEGER ,
+ 
+	execucaoItemSerieId BIGINT,  
+
+	PRIMARY KEY (Id)
+); 
 
