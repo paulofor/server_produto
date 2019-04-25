@@ -10,6 +10,6 @@
     "password": "asp007",
     "name": "mysqlDS",
     "user": "lojadigicom32",
-    "connector": "memory"
+    "connector": "mysql"
   }
 }
