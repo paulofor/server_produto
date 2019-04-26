@@ -79,5 +79,13 @@
   "testeBase": {
     "dataSource": "mysqlDS",
     "public": true
+  },
+  "TreinoAcademia_ExecucaoCarga": {
+    "dataSource": "mysqlDS",
+    "public": true
+  },
+  "PagSeguro": {
+    "dataSource": "mysqlDS",
+    "public": true
   }
 }
