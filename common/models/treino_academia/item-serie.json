@@ -41,56 +41,6 @@
     }
   },
   "acls": [],
-  "methods": { 
-      "SubmitEditaItemSeriePage": {
-      "accepts": [
-        {
-          "arg": "item",
-          "type": "object",
-          "required": true,
-          "description": ""
-        }
-      ],
-      "returns": [
-        {
-          "arg": "resultado",
-          "type": "object",
-          "root": true,
-          "description": ""
-        }
-      ],
-      "description": "submit da tela EditaItemSeriePage",
-      "http": [
-        {
-          "path": "/submitEditaItemSeriePage",
-          "verb": "post"
-        }
-      ]
-    }, 
-      "SubmitCriaSeriePage": {
-      "accepts": [
-        {
-          "arg": "item",
-          "type": "object",
-          "required": true,
-          "description": ""
-        }
-      ],
-      "returns": [
-        {
-          "arg": "resultado",
-          "type": "object",
-          "root": true,
-          "description": ""
-        }
-      ],
-      "description": "submit da tela CriaSeriePage",
-      "http": [
-        {
-          "path": "/submitCriaSeriePage",
-          "verb": "post"
-        }
-      ]
-    }
+  "methods": {
   }
 }
