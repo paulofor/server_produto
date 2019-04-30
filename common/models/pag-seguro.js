@@ -6,7 +6,7 @@ var xml2js = require('xml2js');
 
 module.exports = function (Pagseguro) {
 
-    var token = '';
+    var token = 'A';
 
     var urlSession = 'https://ws.pagseguro.uol.com.br/v2/sessions?email=paulofore@gmail.com&token=' + token;
     //var urlSession = 'https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=paulofore@gmail.com&token=' + token;
