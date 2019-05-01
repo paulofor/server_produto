@@ -8,12 +8,17 @@
   },
   "properties": { 
 	"nome": {
+	
       "type": "string"
     }, 
 	"id": {
-      "type": "number"
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
     }, 
 	"imagem": {
+	
       "type": "string"
     }
   },

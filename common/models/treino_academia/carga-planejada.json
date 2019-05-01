@@ -8,24 +8,33 @@
   },
   "properties": { 
 	"id": {
-      "type": "number"
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
     }, 
 	"valorCarga": {
+	
       "type": "number"
     }, 
 	"dataInicio": {
+	
       "type": "date"
     }, 
 	"dataFinal": {
+	
       "type": "date"
     }, 
 	"quantidadeRepeticao": {
+	
       "type": "number"
     }, 
 	"ativa": {
+	
       "type": "number"
     }, 
 	"ordemRepeticao": {
+	
       "type": "number"
     }
   },

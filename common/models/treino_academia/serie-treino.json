@@ -8,18 +8,25 @@
   },
   "properties": { 
 	"id": {
-      "type": "number"
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
     }, 
 	"dataCriacao": {
+	
       "type": "date"
     }, 
 	"ativa": {
+	
       "type": "number"
     }, 
 	"dataUltimaExecucao": {
+	
       "type": "date"
     }, 
 	"qtdeExecucao": {
+	
       "type": "number"
     }
   },

@@ -8,18 +8,25 @@
   },
   "properties": { 
 	"id": {
-      "type": "number"
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
     }, 
 	"dataHora": {
+	
       "type": "date"
     }, 
 	"valorCarga": {
+	
       "type": "number"
     }, 
 	"repeticao": {
+	
       "type": "number"
     }, 
 	"sequencia": {
+	
       "type": "number"
     }
   },

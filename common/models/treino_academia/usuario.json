@@ -8,15 +8,22 @@
   },
   "properties": { 
 	"id": {
-      "type": "number"
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
     }, 
 	"nome": {
+	
       "type": "string"
     }, 
 	"senha": {
-      "type": "string"
+	
+      "type": "string",
+      "encrypted": true 
     }, 
 	"email": {
+	
       "type": "string"
     }
   },

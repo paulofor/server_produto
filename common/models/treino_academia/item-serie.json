@@ -8,12 +8,17 @@
   },
   "properties": { 
 	"id": {
-      "type": "number"
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
     }, 
 	"ordemExecucao": {
+	
       "type": "number"
     }, 
 	"parametros": {
+	
       "type": "string"
     }
   },

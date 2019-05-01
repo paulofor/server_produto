@@ -8,12 +8,17 @@
   },
   "properties": { 
 	"id": {
-      "type": "number"
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
     }, 
 	"data": {
+	
       "type": "date"
     }, 
 	"concluido": {
+	
       "type": "number"
     }
   },

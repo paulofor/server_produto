@@ -1,3 +1,4 @@
+
 {
   "name": "TreinoAcademia_ExecucaoItemSerie",
   "base": "PersistedModel",
@@ -5,60 +6,69 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "id": {
-      "type": "number"
-    },
-    "dataHoraInicio": {
+  "properties": { 
+	"id": {
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
+    }, 
+	"dataHoraInicio": {
+	
       "type": "date"
-    },
-    "dataHoraFinalizacao": {
+    }, 
+	"dataHoraFinalizacao": {
+	
       "type": "date"
-    },
-    "cargaUtilizada": {
+    }, 
+	"cargaUtilizada": {
+	
       "type": "number"
-    },
-    "sucessoRepeticoes": {
+    }, 
+	"sucessoRepeticoes": {
+	
       "type": "number"
-    },
-    "numeroSerie": {
+    }, 
+	"numeroSerie": {
+	
       "type": "number"
-    },
-    "quantidadeRepeticao": {
+    }, 
+	"quantidadeRepeticao": {
+	
       "type": "number"
     }
   },
   "validations": [],
-  "relations": {
-    "diaTreino": {
+  "relations": { 
+	"diaTreino": {
       "type": "belongsTo",
       "model": "TreinoAcademia_DiaTreino",
       "foreignKey": "diaTreinoId"
-    },
-    "itemSerie": {
+    }, 
+	"itemSerie": {
       "type": "belongsTo",
       "model": "TreinoAcademia_ItemSerie",
       "foreignKey": "itemSerieId"
-    },
-    "exercicio": {
+    }, 
+	"exercicio": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Exercicio",
       "foreignKey": "exercicioId"
-    },
-    "usuario": {
+    }, 
+	"usuario": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Usuario",
       "foreignKey": "usuarioId"
-    },
-    "listaExecucaoCarga": {
+    }  , 
+	"listaExecucaoCarga": {
       "type": "hasMany",
       "model": "TreinoAcademia_ExecucaoCarga",
       "foreignKey": "execucaoItemSerieId"
     }
   },
   "acls": [],
-  "methods": {
-    "SubmitExecutaTreinoPage": {
+  "methods": { 
+      "SubmitExecutaTreinoPage": {
       "accepts": [
         {
           "arg": "item",
