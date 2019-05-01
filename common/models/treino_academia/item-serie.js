@@ -8,6 +8,8 @@ module.exports = function (ItemSerie) {
     // logica de insercao.
 
     ItemSerie.SubmitCriaSeriePage =  function(item,callback) {
+        
+
         if (!item.serieTreinoId || item.serieTreinoId==0) {
             // criar SerieTreino
             var serieTreino = {'ativa' : 1, 'qtdeExecucao' : 0 , 'dataCriacao' : new Date()};
@@ -22,6 +24,7 @@ module.exports = function (ItemSerie) {
                             item.id = result.id;
                             callback(err,item);
                             item.listaCargaPlanejada.forEach(carga => {
+                                carga.valorCarga = carga.valorCarga.replace("," , ".");
                                 carga.itemSerieId = item.id;
                                 app.models.TreinoAcademia_CargaPlanejada.upsert(carga);
                             });
@@ -39,6 +42,7 @@ module.exports = function (ItemSerie) {
                         item.id = result.id;
                         callback(err,item);
                         item.listaCargaPlanejada.forEach(carga => {
+                            carga.valorCarga = carga.valorCarga.replace("," , ".");
                             carga.itemSerieId = item.id;
                             app.models.TreinoAcademia_CargaPlanejada.upsert(carga);
                         });
@@ -49,6 +53,7 @@ module.exports = function (ItemSerie) {
                     item.id = result.id;
                     callback(err,item);
                     item.listaCargaPlanejada.forEach(carga => {
+                        carga.valorCarga = carga.valorCarga.replace("," , ".");
                         carga.itemSerieId = item.id;
                         app.models.TreinoAcademia_CargaPlanejada.upsert(carga);
                     });
