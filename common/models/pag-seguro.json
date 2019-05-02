@@ -180,6 +180,31 @@
           "verb": "get"
         }
       ]
+    },
+    "AderePlanoTreino": {
+      "accepts": [
+        {
+          "arg": "dadoCliente",
+          "type": "object",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "returns": [
+        {
+          "arg": "resposta",
+          "type": "object",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "",
+      "http": [
+        {
+          "path": "/aderePlanoTreino",
+          "verb": "post"
+        }
+      ]
     }
   }
 }

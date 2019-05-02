@@ -6,6 +6,44 @@ var xml2js = require('xml2js');
 
 module.exports = function (Pagseguro) {
 
+
+    /**
+     * 
+     * @param {object} dadoCliente 
+     * @param {Function(Error, object)} callback
+     */
+
+    PagSeguro.AderePlanoTreino = function (dadoCliente, callback) {
+        console.log('  *****   Adere Plano ****** ', creditCardToken);
+        //var urlCriaPlano = 'https://ws.sandbox.pagseguro.uol.com.br/pre-approvals/request?email=paulofore@gmail.com&token=' + token;
+        var urlAderePlano = 'https://ws.pagseguro.uol.com.br/pre-approvals?email=paulofore@gmail.com&token=' + token;
+
+
+        //var proxyUrl = "http://tr626987:Eureka48@10.21.7.10:82";
+        //var proxiedRequest = request.defaults({ 'proxy': proxyUrl });
+        //console.log('body: ', JSON.stringify(aderePlano));
+
+
+        var mensagem = {
+            url: urlAderePlano,
+            headers: {
+                "Content-Type": "application/json;charset=ISO-8859-1",
+                "Accept": "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
+            },
+            body: JSON.stringify(getObjetoAderePlano(creditCardToken))
+        }
+
+        console.log('Body:', JSON.stringify(mensagem.body));
+        request.post(urlAderePlano, mensagem, (err, response, body) => {
+            console.log('Erro: ', err);
+            console.log('Body: ', body);
+            callback(err, JSON.parse(body));
+        });
+    };
+
+
+
+
     var token = 'A';
 
     var urlSession = 'https://ws.pagseguro.uol.com.br/v2/sessions?email=paulofore@gmail.com&token=' + token;
