@@ -44,11 +44,6 @@
       "type": "belongsTo",
       "model": "TreinoAcademia_ItemSerie",
       "foreignKey": "itemSerieId"
-    }, 
-	"usuario": {
-      "type": "belongsTo",
-      "model": "TreinoAcademia_Usuario",
-      "foreignKey": "usuarioId"
     }  
   },
   "acls": [],

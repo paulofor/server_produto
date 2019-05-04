@@ -13,7 +13,7 @@ module.exports = function (Pagseguro) {
      * @param {Function(Error, object)} callback
      */
 
-    PagSeguro.AderePlanoTreino = function (dadoCliente, callback) {
+    Pagseguro.AderePlanoTreino = function (dadoCliente, callback) {
         console.log('  *****   Adere Plano ****** ', creditCardToken);
         //var urlCriaPlano = 'https://ws.sandbox.pagseguro.uol.com.br/pre-approvals/request?email=paulofore@gmail.com&token=' + token;
         var urlAderePlano = 'https://ws.pagseguro.uol.com.br/pre-approvals?email=paulofore@gmail.com&token=' + token;

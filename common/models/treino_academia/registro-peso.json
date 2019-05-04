@@ -27,12 +27,7 @@
     }
   },
   "validations": [],
-  "relations": { 
-	"usuario": {
-      "type": "belongsTo",
-      "model": "TreinoAcademia_Usuario",
-      "foreignKey": "usuarioId"
-    }  
+  "relations": {  
   },
   "acls": [],
   "methods": {

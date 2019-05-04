@@ -19,8 +19,7 @@
     }, 
 	"senha": {
 	
-      "type": "string",
-      "encrypted": true 
+      "type": "string"
     }, 
 	"email": {
 	
@@ -44,19 +43,9 @@
       "model": "TreinoAcademia_ExecucaoItemSerie",
       "foreignKey": "usuarioId"
     }, 
-	"listaCargaPlanejada": {
-      "type": "hasMany",
-      "model": "TreinoAcademia_CargaPlanejada",
-      "foreignKey": "usuarioId"
-    }, 
 	"listaDiaTreino": {
       "type": "hasMany",
       "model": "TreinoAcademia_DiaTreino",
-      "foreignKey": "usuarioId"
-    }, 
-	"listaRegistroPeso": {
-      "type": "hasMany",
-      "model": "TreinoAcademia_RegistroPeso",
       "foreignKey": "usuarioId"
     }
   },

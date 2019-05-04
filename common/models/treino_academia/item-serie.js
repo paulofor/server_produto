@@ -14,20 +14,28 @@ module.exports = function (ItemSerie) {
             // criar SerieTreino
             var serieTreino = {'ativa' : 1, 'qtdeExecucao' : 0 , 'dataCriacao' : new Date()};
             app.models.TreinoAcademia_SerieTreino.upsert(serieTreino , (err,result) => {
+                if (err) {
+                    callback(err,null);
+                    return;
+                }
                 item.serieTreino = result;
                 item.serieTreinoId = result.id;
                 if (!item.exercicio.id || item.exercicio.id==0) {
                     app.models.TreinoAcademia_Exercicio.upsert(item.exercicio, (err,result) => {
+                        if (err) {
+                            callback(err,null);
+                            return;
+                        }
                         item.exercicio = result;
                         item.exercicioId = result.id;
                         ItemSerie.upsert(item, (err,result) => {
+                            if (err) {
+                                callback(err,null);
+                                return;
+                            }
                             item.id = result.id;
                             callback(err,item);
-                            item.listaCargaPlanejada.forEach(carga => {
-                                carga.valorCarga = carga.valorCarga.replace("," , ".");
-                                carga.itemSerieId = item.id;
-                                app.models.TreinoAcademia_CargaPlanejada.upsert(carga);
-                            });
+                            criaCarga(item);
                         })
                     })
                 }
@@ -36,33 +44,44 @@ module.exports = function (ItemSerie) {
         } else {
             if (!item.exercicioId || item.exercicioId==0) {
                 app.models.TreinoAcademia_Exercicio.upsert(item.exercicio, (err,result) => {
+                    if (err) {
+                        callback(err,null);
+                        return;
+                    }
                     item.exercicio = result;
                     item.exercicioId = result.id;
                     ItemSerie.upsert(item, (err,result) => {
+                        if (err) {
+                            callback(err,null);
+                            return;
+                        }
                         item.id = result.id;
                         callback(err,item);
-                        item.listaCargaPlanejada.forEach(carga => {
-                            carga.valorCarga = carga.valorCarga.replace("," , ".");
-                            carga.itemSerieId = item.id;
-                            app.models.TreinoAcademia_CargaPlanejada.upsert(carga);
-                        });
+                        criaCarga(item);
                     })
                 })
             } else {
                 ItemSerie.upsert(item, (err,result) => {
+                    if (err) {
+                        callback(err,null);
+                        return;
+                    }
                     item.id = result.id;
                     callback(err,item);
-                    item.listaCargaPlanejada.forEach(carga => {
-                        carga.valorCarga = carga.valorCarga.replace("," , ".");
-                        carga.itemSerieId = item.id;
-                        app.models.TreinoAcademia_CargaPlanejada.upsert(carga);
-                    });
+                    criaCarga(item);
                 })
             }
         }
     }
 
-
+    function criaCarga(item) {
+        item.listaCargaPlanejada.forEach(carga => {
+            carga.valorCarga = carga.valorCarga.replace("," , ".");
+            carga.itemSerieId = item.id;
+            app.models.TreinoAcademia_CargaPlanejada.upsert(carga);
+        });
+        return true;
+    }
 
 
     /*

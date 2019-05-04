@@ -47,7 +47,7 @@
   },
   "acls": [],
   "methods": { 
-      "SubmitEditaItemSeriePage": {
+      "SubmitCriaSerieWorkPage": {
       "accepts": [
         {
           "arg": "item",
@@ -64,10 +64,10 @@
           "description": ""
         }
       ],
-      "description": "submit da tela EditaItemSeriePage",
+      "description": "submit da tela CriaSerieWorkPage",
       "http": [
         {
-          "path": "/submitEditaItemSeriePage",
+          "path": "/submitCriaSerieWorkPage",
           "verb": "post"
         }
       ]
