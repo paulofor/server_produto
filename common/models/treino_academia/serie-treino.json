@@ -28,6 +28,10 @@
 	"qtdeExecucao": {
 	
       "type": "number"
+    }, 
+	"nome": {
+	
+      "type": "string"
     }
   },
   "validations": [],
