@@ -14,7 +14,7 @@ module.exports = function (Pagseguro) {
      */
 
     Pagseguro.AderePlanoTreino = function (dadoCliente, callback) {
-        console.log('  *****   Adere Plano ****** ', creditCardToken);
+        //console.log('  *****   Adere Plano ****** ', creditCardToken);
         //var urlCriaPlano = 'https://ws.sandbox.pagseguro.uol.com.br/pre-approvals/request?email=paulofore@gmail.com&token=' + token;
         var urlAderePlano = 'https://ws.pagseguro.uol.com.br/pre-approvals?email=paulofore@gmail.com&token=' + token;
 
@@ -30,7 +30,7 @@ module.exports = function (Pagseguro) {
                 "Content-Type": "application/json;charset=ISO-8859-1",
                 "Accept": "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
             },
-            body: JSON.stringify(getObjetoAderePlano(creditCardToken))
+            body: JSON.stringify(dadoCliente)
         }
 
         console.log('Body:', JSON.stringify(mensagem.body));
