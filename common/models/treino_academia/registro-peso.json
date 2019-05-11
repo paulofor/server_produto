@@ -29,6 +29,9 @@
   "validations": [],
   "relations": {  
   },
+  "mixins": {
+    "Counts": true
+  },
   "acls": [],
   "methods": {
   }

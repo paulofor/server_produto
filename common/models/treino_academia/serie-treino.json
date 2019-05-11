@@ -52,6 +52,9 @@
       "foreignKey": "serieTreinoId"
     }
   },
+  "mixins": {
+    "Counts": true
+  },
   "acls": [],
   "methods": {
   }

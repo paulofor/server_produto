@@ -30,6 +30,9 @@
       "foreignKey": "grupoMuscularId"
     }
   },
+  "mixins": {
+    "Counts": true
+  },
   "acls": [],
   "methods": {
   }

@@ -45,6 +45,9 @@
       "foreignKey": "diaTreinoId"
     }
   },
+  "mixins": {
+    "Counts": true
+  },
   "acls": [],
   "methods": {
   }
