@@ -45,6 +45,9 @@
       "foreignKey": "itemSerieId"
     }
   },
+  "mixins": {
+    "Counts": true
+  },
   "acls": [],
   "methods": { 
       "SubmitCriaSerieWorkPage": {

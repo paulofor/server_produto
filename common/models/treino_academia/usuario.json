@@ -24,6 +24,14 @@
 	"email": {
 	
       "type": "string"
+    }, 
+	"dataHoraCriacao": {
+	
+      "type": "date"
+    }, 
+	"dataHoraUltimoAcesso": {
+	
+      "type": "date"
     }
   },
   "validations": [],
@@ -48,6 +56,9 @@
       "model": "TreinoAcademia_DiaTreino",
       "foreignKey": "usuarioId"
     }
+  },
+  "mixins": {
+    "Counts": true
   },
   "acls": [],
   "methods": {

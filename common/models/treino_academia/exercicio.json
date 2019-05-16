@@ -58,6 +58,9 @@
       "foreignKey": "exercicioId"
     }
   },
+  "mixins": {
+    "Counts": true
+  },
   "acls": [],
   "methods": {
   }

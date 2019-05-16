@@ -66,6 +66,9 @@
       "foreignKey": "execucaoItemSerieId"
     }
   },
+  "mixins": {
+    "Counts": true
+  },
   "acls": [],
   "methods": { 
       "SubmitExecutaTreinoPage": {
