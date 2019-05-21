@@ -7,37 +7,37 @@ module.exports = function (ItemSerie) {
 
     // logica de insercao.
 
-    ItemSerie.SubmitCriaSeriePage =  function(item,callback) {
-        
+    ItemSerie.SubmitCriaSeriePage = function (item, callback) {
 
-        if (!item.serieTreinoId || item.serieTreinoId==0) {
+
+        if (!item.serieTreinoId || item.serieTreinoId == 0) {
             //criar SerieTreino
-            var serieTreino = {'ativa' : 1, 'qtdeExecucao' : 0 , 'dataCriacao' : new Date()};
-            app.models.TreinoAcademia_SerieTreino.upsert(serieTreino , (err,result) => {
+            var serieTreino = { 'ativa': 1, 'qtdeExecucao': 0, 'dataCriacao': new Date() };
+            app.models.TreinoAcademia_SerieTreino.upsert(serieTreino, (err, result) => {
                 //console.log('Result1: ' , JSON.stringify(result) );
                 if (err) {
-                    callback(err,null);
+                    callback(err, null);
                     return;
                 }
                 item.serieTreino = result;
                 item.serieTreinoId = result.id;
-                if (!item.exercicio.id || item.exercicio.id==0) {
-                    app.models.TreinoAcademia_Exercicio.upsert(item.exercicio, (err,result) => {
+                if (!item.exercicio.id || item.exercicio.id == 0) {
+                    app.models.TreinoAcademia_Exercicio.upsert(item.exercicio, (err, result) => {
                         //console.log('Result2: ' , JSON.stringify(result) );
                         if (err) {
-                            callback(err,null);
+                            callback(err, null);
                             return;
                         }
                         item.exercicio = result;
                         item.exercicioId = result.id;
-                        ItemSerie.upsert(item, (err,result) => {
+                        ItemSerie.upsert(item, (err, result) => {
                             //console.log('Result3: ' , JSON.stringify(result) );
                             if (err) {
-                                callback(err,null);
+                                callback(err, null);
                                 return;
                             }
                             item.id = result.id;
-                            callback(err,item);
+                            callback(err, item);
                             criaCarga(item);
                         })
                     })
@@ -45,35 +45,35 @@ module.exports = function (ItemSerie) {
 
             })
         } else {
-            if (!item.exercicioId || item.exercicioId==0) {
-                app.models.TreinoAcademia_Exercicio.upsert(item.exercicio, (err,result) => {
+            if (!item.exercicioId || item.exercicioId == 0) {
+                app.models.TreinoAcademia_Exercicio.upsert(item.exercicio, (err, result) => {
                     //console.log('Result4: ' , JSON.stringify(result) );
                     if (err) {
-                        callback(err,null);
+                        callback(err, null);
                         return;
                     }
                     item.exercicio = result;
                     item.exercicioId = result.id;
-                    ItemSerie.upsert(item, (err,result) => {
+                    ItemSerie.upsert(item, (err, result) => {
                         //console.log('Result5: ' , JSON.stringify(result) );
                         if (err) {
-                            callback(err,null);
+                            callback(err, null);
                             return;
                         }
                         item.id = result.id;
-                        callback(err,item);
+                        callback(err, item);
                         criaCarga(item);
                     })
                 })
             } else {
-                ItemSerie.upsert(item, (err,result) => {
+                ItemSerie.upsert(item, (err, result) => {
                     //console.log('Result6: ' , JSON.stringify(result) );
                     if (err) {
-                        callback(err,null);
+                        callback(err, null);
                         return;
                     }
                     item.id = result.id;
-                    callback(err,item);
+                    callback(err, item);
                     criaCarga(item);
                 })
             }
@@ -90,6 +90,11 @@ module.exports = function (ItemSerie) {
         return true;
     }
 
+    function obtemMaiorItem(itemSerieId, callback) {
+        var filtro = { "where": { "serieTreinoId": itemSerieId }, "order": "ordemExecucao desc", "limit": "1" };
+        ItemSerie.findOne(filtro,callback); 
+    }
+
 
     /*
     ItemSerie.SubmitCriaSeriePage = async function (item, callback) {
@@ -102,8 +107,8 @@ module.exports = function (ItemSerie) {
     };
     */
 
-    ItemSerie.SubmitEditaItemSeriePage =  function (item, callback) {
-       var result = item;
-       callback(null,result);
+    ItemSerie.SubmitEditaItemSeriePage = function (item, callback) {
+        var result = item;
+        callback(null, result);
     };
 };
