@@ -19,7 +19,8 @@ create table TreinoAcademia_SerieTreino (
 	dataCriacao   DATETIME  , 
 	ativa   TINYINT  , 
 	dataUltimaExecucao   DATETIME  , 
-	qtdeExecucao   INTEGER  ,
+	qtdeExecucao   INTEGER  , 
+	nome   VARCHAR(50)  ,
  
 	usuarioId VARCHAR(50),
 	   
@@ -87,8 +88,6 @@ create table TreinoAcademia_CargaPlanejada (
 	ordemRepeticao   INTEGER  ,
  
 	itemSerieId VARCHAR(50),
-	  
-	usuarioId VARCHAR(50),
 	   
 
 	PRIMARY KEY (id)
@@ -139,9 +138,7 @@ create table TreinoAcademia_RegistroPeso (
 	data   DATETIME  , 
 	valor   DECIMAL  , 
 	obs   VARCHAR(255)  ,
- 
-	usuarioId VARCHAR(50),
-	   
+  
 
 	PRIMARY KEY (id)
 	
@@ -154,7 +151,9 @@ create table TreinoAcademia_Usuario (
 	id   VARCHAR(50) , 
 	nome   VARCHAR(255)  , 
 	senha   VARCHAR(255)  , 
-	email   VARCHAR(50)  ,
+	email   VARCHAR(50)  , 
+	dataHoraCriacao   DATETIME  , 
+	dataHoraUltimoAcesso   DATETIME  ,
   
 
 	PRIMARY KEY (id)
@@ -172,6 +171,22 @@ create table TreinoAcademia_ExecucaoCarga (
 	sequencia   INTEGER  ,
  
 	execucaoItemSerieId VARCHAR(50),
+	   
+
+	PRIMARY KEY (id)
+	
+	
+	
+); 
+repair table TreinoAcademia_Acao;
+drop table if exists TreinoAcademia_Acao;
+create table TreinoAcademia_Acao ( 
+	nome   VARCHAR(50)  , 
+	dataHora   DATETIME  , 
+	objeto   VARCHAR(50)  , 
+	id   VARCHAR(50) ,
+ 
+	usuarioId VARCHAR(50),
 	   
 
 	PRIMARY KEY (id)
@@ -198,7 +213,6 @@ ADD FOREIGN KEY (usuarioId) REFERENCES TreinoAcademia_Usuario(id) ON DELETE CASC
 
 alter table TreinoAcademia_CargaPlanejada 
 ADD FOREIGN KEY (itemSerieId) REFERENCES TreinoAcademia_ItemSerie(id) ON DELETE CASCADE, 
-ADD FOREIGN KEY (usuarioId) REFERENCES TreinoAcademia_Usuario(id) ON DELETE CASCADE, 
 
 alter table TreinoAcademia_DiaTreino 
 ADD FOREIGN KEY (serieTreinoId) REFERENCES TreinoAcademia_SerieTreino(id) ON DELETE CASCADE, 
@@ -210,12 +224,14 @@ ADD FOREIGN KEY (serieTreinoId) REFERENCES TreinoAcademia_SerieTreino(id) ON DEL
 ADD FOREIGN KEY (exercicioId) REFERENCES TreinoAcademia_Exercicio(id) ON DELETE CASCADE, 
 
 alter table TreinoAcademia_RegistroPeso 
-ADD FOREIGN KEY (usuarioId) REFERENCES TreinoAcademia_Usuario(id) ON DELETE CASCADE, 
 
 alter table TreinoAcademia_Usuario 
 
 alter table TreinoAcademia_ExecucaoCarga 
 ADD FOREIGN KEY (execucaoItemSerieId) REFERENCES TreinoAcademia_ExecucaoItemSerie(id) ON DELETE CASCADE, 
+
+alter table TreinoAcademia_Acao 
+ADD FOREIGN KEY (usuarioId) REFERENCES TreinoAcademia_Usuario(id) ON DELETE CASCADE, 
 
 
 

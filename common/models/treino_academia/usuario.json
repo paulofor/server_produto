@@ -55,6 +55,11 @@
       "type": "hasMany",
       "model": "TreinoAcademia_DiaTreino",
       "foreignKey": "usuarioId"
+    }, 
+	"listaAcao": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_Acao",
+      "foreignKey": "usuarioId"
     }
   },
   "mixins": {

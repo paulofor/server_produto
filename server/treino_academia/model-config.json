@@ -81,4 +81,8 @@
     "dataSource": "mysqlDS",
     "public": true
   }
+  ,"TreinoAcademia_Acao": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
 }
