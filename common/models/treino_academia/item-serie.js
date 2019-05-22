@@ -11,10 +11,8 @@ module.exports = function (ItemSerie) {
 
 
         if (!item.serieTreinoId || item.serieTreinoId == 0) {
-            //criar SerieTreino
             var serieTreino = { 'ativa': 1, 'qtdeExecucao': 0, 'dataCriacao': new Date() };
             app.models.TreinoAcademia_SerieTreino.upsert(serieTreino, (err, result) => {
-                //console.log('Result1: ' , JSON.stringify(result) );
                 if (err) {
                     callback(err, null);
                     return;
@@ -23,15 +21,15 @@ module.exports = function (ItemSerie) {
                 item.serieTreinoId = result.id;
                 if (!item.exercicio.id || item.exercicio.id == 0) {
                     app.models.TreinoAcademia_Exercicio.upsert(item.exercicio, (err, result) => {
-                        //console.log('Result2: ' , JSON.stringify(result) );
                         if (err) {
                             callback(err, null);
                             return;
                         }
                         item.exercicio = result;
                         item.exercicioId = result.id;
+                        itemSerieUpsert(item, callback);
+                        /*
                         ItemSerie.upsert(item, (err, result) => {
-                            //console.log('Result3: ' , JSON.stringify(result) );
                             if (err) {
                                 callback(err, null);
                                 return;
@@ -40,6 +38,7 @@ module.exports = function (ItemSerie) {
                             callback(err, item);
                             criaCarga(item);
                         })
+                        */
                     })
                 }
 
@@ -47,15 +46,15 @@ module.exports = function (ItemSerie) {
         } else {
             if (!item.exercicioId || item.exercicioId == 0) {
                 app.models.TreinoAcademia_Exercicio.upsert(item.exercicio, (err, result) => {
-                    //console.log('Result4: ' , JSON.stringify(result) );
                     if (err) {
                         callback(err, null);
                         return;
                     }
                     item.exercicio = result;
                     item.exercicioId = result.id;
+                    itemSerieUpsert(item, callback);
+                    /*
                     ItemSerie.upsert(item, (err, result) => {
-                        //console.log('Result5: ' , JSON.stringify(result) );
                         if (err) {
                             callback(err, null);
                             return;
@@ -64,10 +63,12 @@ module.exports = function (ItemSerie) {
                         callback(err, item);
                         criaCarga(item);
                     })
+                    */
                 })
             } else {
+                itemSerieUpsert(item, callback);
+                /*
                 ItemSerie.upsert(item, (err, result) => {
-                    //console.log('Result6: ' , JSON.stringify(result) );
                     if (err) {
                         callback(err, null);
                         return;
@@ -76,18 +77,47 @@ module.exports = function (ItemSerie) {
                     callback(err, item);
                     criaCarga(item);
                 })
+                */
             }
         }
     }
 
     function criaCarga(item) {
-        //console.log('Item: ' , JSON.stringify(item));
         item.listaCargaPlanejada.forEach(carga => {
-            //carga.valorCarga = carga.valorCarga.replace("," , ".");
             carga.itemSerieId = item.id;
             app.models.TreinoAcademia_CargaPlanejada.upsert(carga);
         });
         return true;
+    }
+
+    function itemSerieUpsert(item, callback) {
+        if (!item.ordemExecucao) {
+            obtemMaiorItem(item.serieTreinoId, (err, result) => {
+                //console.log('err: ' , JSON.stringify(err));
+                if (result) item.ordemExecucao = result.ordemExecucao + 1;
+                if (err) item.ordemExecucao = 1;
+                ItemSerie.upsert(item, (err, result) => {
+                    if (err) {
+                        callback(err, null);
+                        return;
+                    }
+                    item.id = result.id;
+                    callback(err, item);
+                    criaCarga(item);
+                })
+            })
+        } else {
+            ItemSerie.upsert(item, (err, result) => {
+                if (err) {
+                    callback(err, null);
+                    return;
+                }
+                item.id = result.id;
+                callback(err, item);
+                criaCarga(item);
+            })
+        }
+       
     }
 
     function obtemMaiorItem(itemSerieId, callback) {
