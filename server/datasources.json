@@ -3,13 +3,22 @@
     "name": "db",
     "connector": "memory"
   },
-  "mysqlDS": {
+  "mysqlDSProd": {
     "host": "mysql.lojadigicom.com.br",
     "port": 3306,
     "database": "lojadigicom33",
     "password": "aspNET007",
     "name": "mysqlDS",
     "user": "lojadigicom33",
+    "connector": "mysql"
+  },
+  "mysqlDS": {
+    "host": "mysql.lojadigicom.com.br",
+    "port": 3306,
+    "database": "lojadigicom34",
+    "password": "aspNET007",
+    "name": "mysqlDS",
+    "user": "lojadigicom34",
     "connector": "mysql"
   }
 }

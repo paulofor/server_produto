@@ -24,6 +24,10 @@
       "id": true,
       "type": "string",
       "defaultFn": "uuid"
+    }, 
+	"telaAppId": {
+	
+      "type": "number"
     }
   },
   "validations": [],
