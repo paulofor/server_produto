@@ -44,7 +44,7 @@ module.exports = function (Pagseguro) {
 
 
 
-    var token = 'A';
+    var token = 'AF';
 
     var urlSession = 'https://ws.pagseguro.uol.com.br/v2/sessions?email=paulofore@gmail.com&token=' + token;
     //var urlSession = 'https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=paulofore@gmail.com&token=' + token;
@@ -239,11 +239,24 @@ module.exports = function (Pagseguro) {
 
     Pagseguro.VerificaPagamento = function (cliente, callback) {
 
-        var urlConsulta = 'https://ws.pagseguro.uol.com.br/pre-approvals/notifications/notification-code';
+        var urlConsulta = 'https://ws.pagseguro.uol.com.br/pre-approvals/' + cliente + '?email=paulofore@gmail.com&token=' + token;;
 
-        var resultado;
-        // TODO
-        callback(null, resultado);
+        var mensagem = {
+            url: urlConsulta,
+            headers: {
+                "Content-Type": "application/json;charset=ISO-8859-1",
+                "Accept": "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
+            },
+        }
+
+        request.get(urlConsulta, mensagem, (err, response, body) => {
+            //xml2js.parseString(body,callback);
+            console.log('Erro: ', err);
+            console.log('Body: ', JSON.stringify(body));
+            callback(err, body);
+        });
+
+
     };
 
 

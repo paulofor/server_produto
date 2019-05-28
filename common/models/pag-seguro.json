@@ -160,7 +160,7 @@
       "accepts": [
         {
           "arg": "cliente",
-          "type": "object",
+          "type": "string",
           "required": false,
           "description": ""
         }
@@ -176,7 +176,7 @@
       "description": "",
       "http": [
         {
-          "path": "verificaPagamento",
+          "path": "/verificaPagamento",
           "verb": "get"
         }
       ]
