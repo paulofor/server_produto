@@ -11,5 +11,14 @@
     "name": "mysqlDS",
     "user": "lojadigicom33",
     "connector": "mysql"
+  },
+  "coletorDataBase": {
+    "host": "mysql.lojadigicom.com.br",
+    "port": 3306,
+    "database": "lojadigicom27",
+    "password": "aspnet",
+    "name": "coletorDataBase",
+    "user": "lojadigicom27",
+    "connector": "mysql"
   }
 }
