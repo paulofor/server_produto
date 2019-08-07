@@ -6,7 +6,43 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {
+  "properties": { 
+	"id": {
+	
+      "type": "string"
+    }, 
+	"precoVendaAtual": {
+	
+      "type": "number"
+    }, 
+	"precoVendaAnterior": {
+	
+      "type": "number"
+    }, 
+	"nomeProduto": {
+	
+      "type": "string"
+    }, 
+	"urlProduto": {
+	
+      "type": "string"
+    }, 
+	"nomeMarca": {
+	
+      "type": "string"
+    }, 
+	"idProduto": {
+	
+      "type": "number"
+    }, 
+	"nomeLojaVirtual": {
+	
+      "type": "string"
+    }, 
+	"imagemProduto": {
+	
+      "type": "string"
+    }
   },
   "validations": [],
   "relations": {  
