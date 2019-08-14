@@ -1,6 +1,7 @@
 
 {
   "name": "Cosmetic_Acao",
+  "plural": "Cosmetic_Acaos",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -21,7 +22,9 @@
     }, 
 	"id": {
 	
-      "type": "number"
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
     }, 
 	"telaAppId": {
 	

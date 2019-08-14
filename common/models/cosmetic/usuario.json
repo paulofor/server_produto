@@ -1,6 +1,7 @@
 
 {
   "name": "Cosmetic_Usuario",
+  "plural": "Cosmetic_Usuarios",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -9,7 +10,9 @@
   "properties": { 
 	"id": {
 	
-      "type": "string"
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
     }, 
 	"nome": {
 	
