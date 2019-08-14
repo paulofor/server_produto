@@ -6,10 +6,47 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {
+  "properties": { 
+	"id": {
+	
+      "type": "string"
+    }, 
+	"nome": {
+	
+      "type": "string"
+    }, 
+	"senha": {
+	
+      "type": "string"
+    }, 
+	"email": {
+	
+      "type": "string"
+    }, 
+	"dataHoraCriacao": {
+	
+      "type": "date"
+    }, 
+	"dataHoraUltimoAcesso": {
+	
+      "type": "date"
+    }, 
+	"codigoPagamento": {
+	
+      "type": "string"
+    }, 
+	"statusPagamento": {
+	
+      "type": "string"
+    }
   },
   "validations": [],
-  "relations": {  
+  "relations": {   
+	"listaAcao": {
+      "type": "hasMany",
+      "model": "Cosmetic_Acao",
+      "foreignKey": "usuarioId"
+    }
   },
   "mixins": {
     "Counts": true

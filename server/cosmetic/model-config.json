@@ -49,4 +49,8 @@
     "dataSource": "mysqlDS",
     "public": true
   }
+  ,"Cosmetic_Acao": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
 }

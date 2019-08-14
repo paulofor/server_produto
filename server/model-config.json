@@ -100,6 +100,10 @@
   ,"Cosmetic_Usuario": {
     "dataSource": "coletorDataBase",
     "public": true
+  }  
+  ,"Cosmetic_Acao": {
+    "dataSource": "coletorDataBase",
+    "public": true
   }
   
 }
