@@ -104,6 +104,10 @@
   ,"Cosmetic_Acao": {
     "dataSource": "coletorDataBase",
     "public": true
+  },
+  "Cosmetic_Visitante": {
+    "dataSource": "validadorDataBase",
+    "public": true
   }
   
 }

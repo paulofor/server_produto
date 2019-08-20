@@ -20,5 +20,14 @@
     "name": "coletorDataBase",
     "user": "lojadigicom27",
     "connector": "mysql"
+  },
+  "validadorDataBase": {
+    "host": "mysql.lojadigicom.com.br",
+    "port": 3306,
+    "database": "lojadigicom30",
+    "password": "aspnet007",
+    "name": "validadorDataBase",
+    "user": "lojadigicom30",
+    "connector": "mysql"
   }
 }

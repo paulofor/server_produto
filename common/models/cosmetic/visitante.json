@@ -1,0 +1,39 @@
+
+{
+  "name": "Cosmetic_Visitante",
+  "plural": "Cosmetic_Visitantes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": { 
+	"codigoCookie": {
+	
+      "type": "string"
+    }, 
+	"dataHora": {
+	
+      "type": "date"
+    }, 
+	"versaoAppId": {
+	
+      "type": "number"
+    }, 
+	"id": {
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
+    }
+  },
+  "validations": [],
+  "relations": {  
+  },
+  "mixins": {
+    "Counts": true
+  },
+  "acls": [],
+  "methods": {
+  }
+}
