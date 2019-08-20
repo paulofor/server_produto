@@ -35,5 +35,23 @@
   },
   "acls": [],
   "methods": {
+    "proximoCookie": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "codigoCookie",
+          "type": "string",
+          "root": false,
+          "description": "proximo cookie"
+        }
+      ],
+      "description": "retorna o proximo cookie",
+      "http": [
+        {
+          "path": "/proximoCookie",
+          "verb": "get"
+        }
+      ]
+    }
   }
 }
