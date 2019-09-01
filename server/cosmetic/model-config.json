@@ -53,8 +53,4 @@
     "dataSource": "mysqlDS",
     "public": true
   }
-  ,"Cosmetic_Visitante": {
-    "dataSource": "mysqlDS",
-    "public": true
-  }
 }

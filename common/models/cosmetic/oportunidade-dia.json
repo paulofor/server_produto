@@ -45,6 +45,14 @@
 	"imagemProduto": {
 	
       "type": "string"
+    }, 
+	"precoSugestao": {
+	
+      "type": "number"
+    }, 
+	"posicaoProduto": {
+	
+      "type": "number"
     }
   },
   "validations": [],
