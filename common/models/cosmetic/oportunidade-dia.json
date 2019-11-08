@@ -53,6 +53,14 @@
 	"posicaoProduto": {
 	
       "type": "number"
+    }, 
+	"dataUltimaPrecoAnterior": {
+	
+      "type": "date"
+    }, 
+	"percentualAjusteVenda": {
+	
+      "type": "Percent"
     }
   },
   "validations": [],
