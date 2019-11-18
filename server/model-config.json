@@ -5,6 +5,7 @@
       "loopback/server/models",
       "../common/models",
       "../common/models/treino_academia",
+      "../common/models/cosmetic",
       "./models"
     ],
     "mixins": [
@@ -91,5 +92,22 @@
   "TreinoAcademia_Acao": {
     "dataSource": "mysqlDS",
     "public": true
+  },
+  "Cosmetic_OportunidadeDia": {
+    "dataSource": "coletorDataBase",
+    "public": true
   }
+  ,"Cosmetic_Usuario": {
+    "dataSource": "coletorDataBase",
+    "public": true
+  }  
+  ,"Cosmetic_Acao": {
+    "dataSource": "coletorDataBase",
+    "public": true
+  },
+  "Cosmetic_Visitante": {
+    "dataSource": "validadorDataBase",
+    "public": true
+  }
+  
 }

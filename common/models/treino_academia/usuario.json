@@ -32,6 +32,10 @@
 	"dataHoraUltimoAcesso": {
 	
       "type": "date"
+    }, 
+	"codigoPagamento": {
+	
+      "type": "string"
     }
   },
   "validations": [],

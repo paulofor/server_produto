@@ -238,25 +238,16 @@ module.exports = function (Pagseguro) {
      */
 
     Pagseguro.VerificaPagamento = function (cliente, callback) {
-
-        var urlConsulta = 'https://ws.pagseguro.uol.com.br/pre-approvals/' + cliente + '?email=paulofore@gmail.com&token=' + token;;
-
+        var urlVerificaPorNotificacao = 'https://ws.pagseguro.uol.com.br/pre-approvals/' + cliente + '?email=paulofore@gmail.com&token=' + token;
         var mensagem = {
-            url: urlConsulta,
             headers: {
                 "Content-Type": "application/json;charset=ISO-8859-1",
                 "Accept": "application/vnd.pagseguro.com.br.v3+json;charset=ISO-8859-1"
             },
         }
-
-        request.get(urlConsulta, mensagem, (err, response, body) => {
-            //xml2js.parseString(body,callback);
-            console.log('Erro: ', err);
-            console.log('Body: ', JSON.stringify(body));
-            callback(err, body);
+        request(urlVerificaPorNotificacao, mensagem, function (error, response, body) {
+            callback(error, JSON.parse(body));
         });
-
-
     };
 
 
