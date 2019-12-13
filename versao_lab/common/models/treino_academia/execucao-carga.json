@@ -1,0 +1,47 @@
+
+{
+  "name": "TreinoAcademia_ExecucaoCarga",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": { 
+	"id": {
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
+    }, 
+	"dataHora": {
+	
+      "type": "date"
+    }, 
+	"valorCarga": {
+	
+      "type": "number"
+    }, 
+	"repeticao": {
+	
+      "type": "number"
+    }, 
+	"sequencia": {
+	
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": { 
+	"execucaoItemSerie": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_ExecucaoItemSerie",
+      "foreignKey": "execucaoItemSerieId"
+    }  
+  },
+  "mixins": {
+    "Counts": true
+  },
+  "acls": [],
+  "methods": {
+  }
+}

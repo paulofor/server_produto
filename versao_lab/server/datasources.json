@@ -1,0 +1,33 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysqlDS": {
+    "host": "mysql.lojadigicom.com.br",
+    "port": 3306,
+    "database": "lojadigicom33",
+    "password": "aspNET007",
+    "name": "mysqlDS",
+    "user": "lojadigicom33",
+    "connector": "memory"
+  },
+  "coletorDataBase": {
+    "host": "mysql.lojadigicom.com.br",
+    "port": 3306,
+    "database": "lojadigicom27",
+    "password": "aspnet",
+    "name": "coletorDataBase",
+    "user": "lojadigicom27",
+    "connector": "memory"
+  },
+  "validadorDataBase": {
+    "host": "mysql.lojadigicom.com.br",
+    "port": 3306,
+    "database": "lojadigicom30",
+    "password": "aspnet007",
+    "name": "validadorDataBase",
+    "user": "lojadigicom30",
+    "connector": "memory"
+  }
+}

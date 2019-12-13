@@ -1,0 +1,47 @@
+
+{
+  "name": "TreinoAcademia_Acao",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": { 
+	"nome": {
+	
+      "type": "string"
+    }, 
+	"dataHora": {
+	
+      "type": "date"
+    }, 
+	"objeto": {
+	
+      "type": "string"
+    }, 
+	"id": {
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
+    }, 
+	"telaAppId": {
+	
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": { 
+	"usuario": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_Usuario",
+      "foreignKey": "usuarioId"
+    }  
+  },
+  "mixins": {
+    "Counts": true
+  },
+  "acls": [],
+  "methods": {
+  }
+}

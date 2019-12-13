@@ -1,0 +1,100 @@
+
+{
+  "name": "TreinoAcademia_ExecucaoItemSerie",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": { 
+	"id": {
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
+    }, 
+	"dataHoraInicio": {
+	
+      "type": "date"
+    }, 
+	"dataHoraFinalizacao": {
+	
+      "type": "date"
+    }, 
+	"cargaUtilizada": {
+	
+      "type": "number"
+    }, 
+	"sucessoRepeticoes": {
+	
+      "type": "number"
+    }, 
+	"numeroSerie": {
+	
+      "type": "number"
+    }, 
+	"quantidadeRepeticao": {
+	
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": { 
+	"diaTreino": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_DiaTreino",
+      "foreignKey": "diaTreinoId"
+    }, 
+	"itemSerie": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_ItemSerie",
+      "foreignKey": "itemSerieId"
+    }, 
+	"exercicio": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_Exercicio",
+      "foreignKey": "exercicioId"
+    }, 
+	"usuario": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_Usuario",
+      "foreignKey": "usuarioId"
+    }  , 
+	"listaExecucaoCarga": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_ExecucaoCarga",
+      "foreignKey": "execucaoItemSerieId"
+    }
+  },
+  "mixins": {
+    "Counts": true
+  },
+  "acls": [],
+  "methods": { 
+      "SubmitExecutaTreinoPage": {
+      "accepts": [
+        {
+          "arg": "item",
+          "type": "object",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "returns": [
+        {
+          "arg": "resultado",
+          "type": "object",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "submit da tela ExecutaTreinoPage",
+      "http": [
+        {
+          "path": "/submitExecutaTreinoPage",
+          "verb": "post"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,75 @@
+
+{
+  "name": "Cosmetic_OportunidadeDia",
+  "plural": "Cosmetic_OportunidadeDias",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": { 
+	"id": {
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
+    }, 
+	"precoVendaAtual": {
+	
+      "type": "number"
+    }, 
+	"precoVendaAnterior": {
+	
+      "type": "number"
+    }, 
+	"nomeProduto": {
+	
+      "type": "string"
+    }, 
+	"urlProduto": {
+	
+      "type": "string"
+    }, 
+	"nomeMarca": {
+	
+      "type": "string"
+    }, 
+	"idProduto": {
+	
+      "type": "number"
+    }, 
+	"nomeLojaVirtual": {
+	
+      "type": "string"
+    }, 
+	"imagemProduto": {
+	
+      "type": "string"
+    }, 
+	"precoSugestao": {
+	
+      "type": "number"
+    }, 
+	"posicaoProduto": {
+	
+      "type": "number"
+    }, 
+	"dataUltimaPrecoAnterior": {
+	
+      "type": "date"
+    }, 
+	"percentualAjusteVenda": {
+	
+      "type": "Percent"
+    }
+  },
+  "validations": [],
+  "relations": {  
+  },
+  "mixins": {
+    "Counts": true
+  },
+  "acls": [],
+  "methods": {
+  }
+}

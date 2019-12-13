@@ -1,0 +1,55 @@
+
+{
+  "name": "TreinoAcademia_CargaPlanejada",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": { 
+	"id": {
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
+    }, 
+	"valorCarga": {
+	
+      "type": "number"
+    }, 
+	"dataInicio": {
+	
+      "type": "date"
+    }, 
+	"dataFinal": {
+	
+      "type": "date"
+    }, 
+	"quantidadeRepeticao": {
+	
+      "type": "number"
+    }, 
+	"ativa": {
+	
+      "type": "number"
+    }, 
+	"ordemRepeticao": {
+	
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": { 
+	"itemSerie": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_ItemSerie",
+      "foreignKey": "itemSerieId"
+    }  
+  },
+  "mixins": {
+    "Counts": true
+  },
+  "acls": [],
+  "methods": {
+  }
+}

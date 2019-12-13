@@ -1,0 +1,39 @@
+
+{
+  "name": "TreinoAcademia_GrupoMuscular",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": { 
+	"nome": {
+	
+      "type": "string"
+    }, 
+	"id": {
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
+    }, 
+	"imagem": {
+	
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {   
+	"listaExercicio": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_Exercicio",
+      "foreignKey": "grupoMuscularId"
+    }
+  },
+  "mixins": {
+    "Counts": true
+  },
+  "acls": [],
+  "methods": {
+  }
+}

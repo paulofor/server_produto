@@ -1,0 +1,52 @@
+{
+  "name": "ExemploModelo",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nome": {
+      "type": "string"
+    },
+    "valor": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "listaTeste": {
+      "type": "hasMany",
+      "model": "testeBase",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {
+    "SubmitExemplo": {
+      "accepts": [
+        {
+          "arg": "item",
+          "type": "object",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "returns": [
+        {
+          "arg": "resultado",
+          "type": "object",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "submit da tela exemplo",
+      "http": [
+        {
+          "path": "/submitExemplo",
+          "verb": "post"
+        }
+      ]
+    }
+  }
+}
