@@ -141,7 +141,7 @@
       "http": [
         {
           "path": "/aderePlano",
-          "verb": "get"
+          "verb": "post"
         }
       ]
     },
