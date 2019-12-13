@@ -21,6 +21,7 @@
     "loopback-component-storage": "^3.5.0",
     "loopback-connector-mysql": "^5.3.0",
     "loopback-counts-mixin": "^1.0.1",
+    "loopback-ssl": "^1.0.4",
     "request": "^2.88.0",
     "serve-favicon": "^2.0.1",
     "stats-lite": "^2.2.0",

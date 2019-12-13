@@ -1,6 +1,6 @@
 {
   "restApiRoot": "/api",
-  "host": "0.0.0.0",
+  "host": "localhost",
   "port": 21189,
   "remoting": {
     "context": false,
@@ -16,16 +16,16 @@
     "urlencoded": {
       "extended": true,
       "limit": "100kb"
-    },
-    "cors": false,
-    "httpMode": false,
-    "certConfig": {
-      "path": "/certificate/path/",
-      "key": "local.pem",
-      "cert": "local.crt.pem",
-      "ca": [],
-      "requestCert": false,
-      "rejectUnauthorized": false
     }
+  },
+  "cors": false,
+  "httpMode": false,
+  "certConfig": {
+    "path": "/home/usuario/ssl/",
+    "key": "server_key.pem",
+    "cert": "server_cert.pem",
+    "ca": [],
+    "requestCert": false,
+    "rejectUnauthorized": false
   }
 }
