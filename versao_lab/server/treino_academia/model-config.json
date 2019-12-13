@@ -1,0 +1,88 @@
+
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "../common/models/treino",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ExemploModelo": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"TreinoAcademia_GrupoMuscular": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"TreinoAcademia_SerieTreino": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"TreinoAcademia_Exercicio": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"TreinoAcademia_ExecucaoItemSerie": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"TreinoAcademia_CargaPlanejada": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"TreinoAcademia_DiaTreino": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"TreinoAcademia_ItemSerie": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"TreinoAcademia_RegistroPeso": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"TreinoAcademia_Usuario": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"TreinoAcademia_ExecucaoCarga": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"TreinoAcademia_Acao": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+}

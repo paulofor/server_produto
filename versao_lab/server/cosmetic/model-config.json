@@ -1,0 +1,56 @@
+
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "../common/models/treino",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ExemploModelo": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"Cosmetic_OportunidadeDia": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"Cosmetic_Usuario": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+  ,"Cosmetic_Acao": {
+    "dataSource": "mysqlDS",
+    "public": true
+  }
+}

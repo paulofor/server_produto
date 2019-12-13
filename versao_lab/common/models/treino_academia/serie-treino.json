@@ -1,0 +1,61 @@
+
+{
+  "name": "TreinoAcademia_SerieTreino",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": { 
+	"id": {
+	
+      "id": true,
+      "type": "string",
+      "defaultFn": "uuid"
+    }, 
+	"dataCriacao": {
+	
+      "type": "date"
+    }, 
+	"ativa": {
+	
+      "type": "number"
+    }, 
+	"dataUltimaExecucao": {
+	
+      "type": "date"
+    }, 
+	"qtdeExecucao": {
+	
+      "type": "number"
+    }, 
+	"nome": {
+	
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": { 
+	"usuario": {
+      "type": "belongsTo",
+      "model": "TreinoAcademia_Usuario",
+      "foreignKey": "usuarioId"
+    }  , 
+	"listaItemSerie": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_ItemSerie",
+      "foreignKey": "serieTreinoId"
+    }, 
+	"listaDiaTreino": {
+      "type": "hasMany",
+      "model": "TreinoAcademia_DiaTreino",
+      "foreignKey": "serieTreinoId"
+    }
+  },
+  "mixins": {
+    "Counts": true
+  },
+  "acls": [],
+  "methods": {
+  }
+}
