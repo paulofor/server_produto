@@ -50,5 +50,30 @@
   },
   "acls": [],
   "methods": {
+    "FinalizaDia": {
+      "accepts": [
+        {
+          "arg": "IdDiaTreino",
+          "type": "number",
+          "required": true,
+          "description": ""
+        }
+      ],
+      "returns": [
+        {
+          "arg": "resultado",
+          "type": "object",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "Finalizou o dia de treino",
+      "http": [
+        {
+          "path": "/finalizaDia",
+          "verb": "post"
+        }
+      ]
+    }
   }
 }

@@ -1,4 +1,3 @@
-
 {
   "name": "TreinoAcademia_SerieTreino",
   "base": "PersistedModel",
@@ -6,47 +5,41 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": { 
-	"id": {
-	
+  "properties": {
+    "id": {
       "id": true,
       "type": "string",
       "defaultFn": "uuid"
-    }, 
-	"dataCriacao": {
-	
+    },
+    "dataCriacao": {
       "type": "date"
-    }, 
-	"ativa": {
-	
+    },
+    "ativa": {
       "type": "number"
-    }, 
-	"dataUltimaExecucao": {
-	
+    },
+    "dataUltimaExecucao": {
       "type": "date"
-    }, 
-	"qtdeExecucao": {
-	
+    },
+    "qtdeExecucao": {
       "type": "number"
-    }, 
-	"nome": {
-	
+    },
+    "nome": {
       "type": "string"
     }
   },
   "validations": [],
-  "relations": { 
-	"usuario": {
+  "relations": {
+    "usuario": {
       "type": "belongsTo",
       "model": "TreinoAcademia_Usuario",
       "foreignKey": "usuarioId"
-    }  , 
-	"listaItemSerie": {
+    },
+    "listaItemSerie": {
       "type": "hasMany",
       "model": "TreinoAcademia_ItemSerie",
       "foreignKey": "serieTreinoId"
-    }, 
-	"listaDiaTreino": {
+    },
+    "listaDiaTreino": {
       "type": "hasMany",
       "model": "TreinoAcademia_DiaTreino",
       "foreignKey": "serieTreinoId"
@@ -57,5 +50,6 @@
   },
   "acls": [],
   "methods": {
+ 
   }
 }
