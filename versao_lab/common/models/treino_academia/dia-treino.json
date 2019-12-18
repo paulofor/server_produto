@@ -54,7 +54,7 @@
       "accepts": [
         {
           "arg": "IdDiaTreino",
-          "type": "number",
+          "type": "string",
           "required": true,
           "description": ""
         }
