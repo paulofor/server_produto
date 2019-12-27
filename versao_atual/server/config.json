@@ -16,7 +16,16 @@
     "urlencoded": {
       "extended": true,
       "limit": "100kb"
-    },
-    "cors": false
+    }
+  },
+  "cors": false,
+  "httpMode": false,
+  "certConfig": {
+    "path": "/home/digicom/certificados/",
+    "key": "privkey.pem",
+    "cert": "cert.pem",
+    "ca": [],
+    "requestCert": false,
+    "rejectUnauthorized": false
   }
 }
