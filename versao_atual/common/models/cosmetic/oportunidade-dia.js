@@ -11,6 +11,11 @@ module.exports = function (OportunidadeDia) {
 
     OportunidadeDia.ListaApp = function (callback) {
         var lista;
-        OportunidadeDia.find({"order" : "dataUltimaPrecoAnterior desc"},callback);
+        let filtro = 
+                    {
+                        "order" : "dataUltimaPrecoAnterior desc",
+                        "where" : { "dataUltimaPrecoAnterior" : {gt: new Date('2020-01-01')} }
+                    }
+        OportunidadeDia.find(filtro,callback);
     };
 };
