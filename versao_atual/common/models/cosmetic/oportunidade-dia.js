@@ -18,4 +18,16 @@ module.exports = function (OportunidadeDia) {
                     }
         OportunidadeDia.find(filtro,callback);
     };
+
+
+    OportunidadeDia.ListaEmail = function (callback) {
+        var lista;
+        let filtro = 
+                    {
+                        "order" : "dataUltimaPrecoAnterior desc",
+                        "where" : { "dataUltimaPrecoAnterior" : {gt: new Date('2020-01-01')} },
+                        "limit" : 3
+                    }
+        OportunidadeDia.find(filtro,callback);
+    };
 };

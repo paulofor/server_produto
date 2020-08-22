@@ -88,6 +88,24 @@
           "verb": "get"
         }
       ]
+    },
+    "ListaEmail": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "lista",
+          "type": "array",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "chamada pelos enviadores de email",
+      "http": [
+        {
+          "path": "/listaEmail",
+          "verb": "get"
+        }
+      ]
     }
   }
 }
