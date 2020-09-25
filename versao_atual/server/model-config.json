@@ -92,12 +92,12 @@
   "Cosmetic_OportunidadeDia": {
     "dataSource": "coletorDataBase",
     "public": true
-  }
-  ,"Cosmetic_Usuario": {
+  },
+  "Cosmetic_Usuario": {
     "dataSource": "coletorDataBase",
     "public": true
-  }  
-  ,"Cosmetic_Acao": {
+  },
+  "Cosmetic_Acao": {
     "dataSource": "coletorDataBase",
     "public": true
   },
@@ -105,5 +105,4 @@
     "dataSource": "validadorDataBase",
     "public": true
   }
-  
 }
