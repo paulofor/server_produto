@@ -1,6 +1,0 @@
-{
-  "loopback-component-explorer": {
-    "mountPath": "/painel",
-    "generateOperationScopedModels": true
-  }
-}
