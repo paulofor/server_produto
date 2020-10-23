@@ -1,0 +1,27 @@
+{
+  "name": "Cosmetic_PrecoDiario",
+  "plural" : "Cosmetic_PrecoDiarios",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "data": {
+      "type": "string"
+    },
+    "idProduto": {
+      "type": "number"
+    },
+    "precoVenda": {
+      "type": "number"
+    },
+    "posicaoProduto": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

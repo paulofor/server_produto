@@ -61,10 +61,18 @@
 	"percentualAjusteVenda": {
 	
       "type": "Percent"
+    },
+    "idNaturezaProduto" : {
+      "type" : "number"
     }
   },
   "validations": [],
   "relations": {  
+    "precoDiarios" : {
+      "type" : "hasMany",
+      "model" : "Cosmetic_PrecoDiario",
+      "foreignKey": "idOportunidadeDia"
+    }
   },
   "mixins": {
     "Counts": true
@@ -85,6 +93,24 @@
       "http": [
         {
           "path": "/listaApp",
+          "verb": "get"
+        }
+      ]
+    },
+    "ListaAppComputador": {
+      "accepts": [],
+      "returns": [
+        {
+          "arg": "lista",
+          "type": "array",
+          "root": true,
+          "description": ""
+        }
+      ],
+      "description": "chamada pelos aplicativos",
+      "http": [
+        {
+          "path": "/listaAppComputador",
           "verb": "get"
         }
       ]

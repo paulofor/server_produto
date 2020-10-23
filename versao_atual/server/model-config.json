@@ -104,5 +104,9 @@
   "Cosmetic_Visitante": {
     "dataSource": "validadorDataBase",
     "public": true
+  },
+  "Cosmetic_PrecoDiario": {
+    "dataSource": "coletorDataBase",
+    "public": true
   }
 }
